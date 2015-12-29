@@ -1,6 +1,6 @@
 {
   "name": "react-toggles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Full function boilerplate to take advantage of latest ECMAScript(JavaScript) Feature.Build your react component, javascript utils and so on. The limitation is your imagination",
   "main": "lib/index.js",
   "files": [
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yesvods/ES678-boilerplate.git"
+    "url": "git+https://github.com/yesvods/react-toggles.git"
   },
   "keywords": [
     "es6",
@@ -38,9 +38,9 @@
   "author": "Jogis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yesvods/ES678-boilerplate/issues"
+    "url": "https://github.com/yesvods/react-toggles/issues"
   },
-  "homepage": "https://github.com/yesvods/ES678-boilerplate#readme",
+  "homepage": "https://github.com/yesvods/react-toggles#readme",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.2.1",
