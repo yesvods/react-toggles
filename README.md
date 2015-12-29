@@ -1,4 +1,4 @@
-# ES678-boilerplate
+# react-toggles 
 
 Flexible React Toggle Button 
 ### live-demo 
