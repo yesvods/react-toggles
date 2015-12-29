@@ -1,5 +1,5 @@
 {
-  "name": "ES678-boilderplate",
+  "name": "react-toggles",
   "version": "0.0.0",
   "description": "Full function boilerplate to take advantage of latest ECMAScript(JavaScript) Feature.Build your react component, javascript utils and so on. The limitation is your imagination",
   "main": "lib/index.js",
@@ -19,8 +19,8 @@
     "coveralls": "npm run cover-node -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "check": "npm run lint && npm run test",
     "build:lib": "babel src --out-dir lib",
-    "build:umd": "webpack src/index.js dist/constant.js --config webpack.config.development.js",
-    "build:umd:min": "webpack src/index.js dist/constant.min.js --config webpack.config.production.js",
+    "build:umd": "webpack src/index.js dist/toggles.js --config webpack.config.development.js",
+    "build:umd:min": "webpack src/index.js dist/toggles.min.js --config webpack.config.production.js",
     "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:example": "npm run build && ./node_modules/webpack/bin/webpack.js example/base/index.js example/base/bundle.js --config webpack.config.base.js",
     "preversion": "npm run clean && npm run check",
@@ -74,6 +74,6 @@
     "webpack": "^1.12.9"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "noop3": "^13.7.2"
   }
 }

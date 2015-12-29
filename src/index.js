@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import noop from 'noop3';
 import style from './index.scss';
 
 export default
@@ -12,7 +12,7 @@ class Toggle extends React.Component {
     size: '64px',
     id: 'toggle',
     formName: 'formToggle',
-    onChange: _.noop,
+    onChange: noop,
     defaultChecked: true,
   };
   render(){
@@ -23,7 +23,7 @@ class Toggle extends React.Component {
       type="checkbox"
       id={this.props.id}
       name={this.props.formName}
-      checked={_.isBoolean(this.state.checked)?this.state.checked:this.props.defaultChecked}
+      checked={typeof this.state.checked === 'boolean'?this.state.checked:this.props.defaultChecked}
       onChange={e => {
         let flag = e.target.checked;
         this.props.onChange(e, flag);
