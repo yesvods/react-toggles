@@ -1,0 +1,37 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+}
+.bar {
+  display:inline-block;
+  background: #555;
+  border-radius: 100px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.toggleButton {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  background: #eee;
+  border-radius: 50%;
+  transition: left 0.2s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.wrapper>input[type=checkbox] {
+  display: none;
+}
+.wrapper>input[type=checkbox]:checked {
+  & ~ .bar {
+    color: #f00;
+    background: green;
+    font-style: normal;
+  }
+  & ~ .toggleButton {
+    left: 50%;    
+  }
+} 
