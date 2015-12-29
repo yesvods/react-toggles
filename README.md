@@ -1,11 +1,12 @@
 # ES678-boilerplate
 
-Full function boilerplate to take advantage of latest ECMAScript(JavaScript) Feature.Build your react component, javascript utils and so on. The limitation is your imagination
+Flexible React Toggle Button 
+### live-demo 
+http://yesvods.github.io/react-toggles/
 
-[![build status](https://api.travis-ci.org/yesvods/ES678-boilerplate.svg?branch=master)](https://travis-ci.org/yesvods/ES678-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/yesvods/ES678-boilerplate/badge.svg?branch=master&service=github)](https://coveralls.io/github/yesvods/ES678-boilerplate?branch=master)
-
+![](http://ooo.0o0.ooo/2015/12/28/5681e9ca45a34.gif)
 
 ### License
 
 MIT
+
