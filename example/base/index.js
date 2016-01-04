@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Toggles from '../../src';
+import Toggles from '../../lib';
 
 class Example extends React.Component {
   render(){

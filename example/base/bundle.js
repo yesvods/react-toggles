@@ -66,9 +66,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _src = __webpack_require__(159);
+	var _lib = __webpack_require__(159);
 	
-	var _src2 = _interopRequireDefault(_src);
+	var _lib2 = _interopRequireDefault(_lib);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -101,7 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            '60px'
 	          ),
-	          _react2.default.createElement(_src2.default, {
+	          _react2.default.createElement(_lib2.default, {
 	            size: '60px',
 	            id: 'react-toggles-60',
 	            defaultChecked: true,
@@ -117,7 +117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            '120px'
 	          ),
-	          _react2.default.createElement(_src2.default, {
+	          _react2.default.createElement(_lib2.default, {
 	            size: '120px',
 	            id: 'react-toggles-120',
 	            defaultChecked: true,
@@ -133,7 +133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            '180px'
 	          ),
-	          _react2.default.createElement(_src2.default, {
+	          _react2.default.createElement(_lib2.default, {
 	            size: '180px',
 	            id: 'react-toggles-180',
 	            defaultChecked: false,
@@ -19743,7 +19743,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	
+	var _createClass = (function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	  };
+	})();
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -19761,13 +19771,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	}
 	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	function _possibleConstructorReturn(self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+	}
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
 	
 	var Toggle = (function (_React$Component) {
 	  _inherits(Toggle, _React$Component);
@@ -19786,34 +19810,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      var _this2 = this;
 	
-	      return _react2.default.createElement(
-	        'span',
-	        { className: _index2.default.wrapper },
-	        _react2.default.createElement('input', {
-	          type: 'checkbox',
-	          id: this.props.id,
-	          name: this.props.formName,
-	          checked: typeof this.state.checked === 'boolean' ? this.state.checked : this.props.defaultChecked,
-	          onChange: function onChange(e) {
-	            var flag = e.target.checked;
-	            _this2.props.onChange(e, flag);
-	            _this2.setState({ checked: flag });
-	          } }),
-	        _react2.default.createElement('label', {
-	          className: _index2.default.bar,
-	          htmlFor: this.props.id,
-	          style: {
-	            width: this.props.size,
-	            height: '' + ((parseInt(this.props.size) - 4) / 2 + 4)
-	          } }),
-	        _react2.default.createElement('label', {
-	          className: _index2.default.toggleButton,
-	          htmlFor: this.props.id,
-	          style: {
-	            width: '' + (parseInt(this.props.size) - 4) / 2,
-	            height: '' + (parseInt(this.props.size) - 4) / 2
-	          } })
-	      );
+	      return _react2.default.createElement('span', { className: _index2.default.wrapper }, _react2.default.createElement('input', {
+	        type: 'checkbox',
+	        id: this.props.id,
+	        name: this.props.formName,
+	        checked: typeof this.state.checked === 'boolean' ? this.state.checked : this.props.defaultChecked,
+	        onChange: function onChange(e) {
+	          var flag = e.target.checked;
+	          _this2.props.onChange(e, flag);
+	          _this2.setState({ checked: flag });
+	        } }), _react2.default.createElement('label', {
+	        className: _index2.default.bar,
+	        htmlFor: this.props.id,
+	        style: {
+	          width: this.props.size,
+	          height: '' + ((parseInt(this.props.size) - 4) / 2 + 4)
+	        } }), _react2.default.createElement('label', {
+	        className: _index2.default.toggleButton,
+	        htmlFor: this.props.id,
+	        style: {
+	          width: '' + (parseInt(this.props.size) - 4) / 2,
+	          height: '' + (parseInt(this.props.size) - 4) / 2
+	        } }));
 	    }
 	  }]);
 	
@@ -19872,13 +19890,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, ".wrapper___178UG {\n  display: inline-block;\n  position: relative;\n  line-height: 0; }\n\n.bar___1U79Q {\n  display: inline-block;\n  background: #555;\n  border-radius: 100px;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none; }\n\n.toggleButton___3XeIN {\n  position: absolute;\n  left: 2px;\n  top: 2px;\n  background: #eee;\n  border-radius: 50%;\n  transition: left 0.2s;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none; }\n\n.wrapper___178UG > input[type=checkbox] {\n  display: none; }\n\n.wrapper___178UG > input[type=checkbox]:checked ~ .bar___1U79Q {\n  color: #f00;\n  background: green;\n  font-style: normal; }\n\n.wrapper___178UG > input[type=checkbox]:checked ~ .toggleButton___3XeIN {\n  left: 50%; }\n", ""]);
+	exports.push([module.id, ".wrapper___3aET1 {\n  display: inline-block;\n  position: relative;\n  line-height: 0; }\n\n.bar___1nkZl {\n  display: inline-block;\n  background: #555;\n  border-radius: 100px;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none; }\n\n.toggleButton___1oaYz {\n  position: absolute;\n  left: 2px;\n  top: 2px;\n  background: #eee;\n  border-radius: 50%;\n  transition: left 0.2s;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none; }\n\n.wrapper___3aET1 > input[type=checkbox] {\n  display: none; }\n\n.wrapper___3aET1 > input[type=checkbox]:checked ~ .bar___1nkZl {\n  color: #f00;\n  background: green;\n  font-style: normal; }\n\n.wrapper___3aET1 > input[type=checkbox]:checked ~ .toggleButton___1oaYz {\n  left: 50%; }\n", ""]);
 	
 	// exports
 	exports.locals = {
-		"wrapper": "wrapper___178UG",
-		"bar": "bar___1U79Q",
-		"toggleButton": "toggleButton___3XeIN"
+		"wrapper": "wrapper___3aET1",
+		"bar": "bar___1nkZl",
+		"toggleButton": "toggleButton___1oaYz"
 	};
 
 /***/ },
