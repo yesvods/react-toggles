@@ -84,12 +84,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Example() {
 	    _classCallCheck(this, Example);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Example).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Example).call(this));
+	
+	    _this.state = {
+	      toggle60: true,
+	      toggle120: true,
+	      toggle180: false
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(Example, [{
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      return _react2.default.createElement(
 	        'span',
 	        null,
@@ -104,9 +113,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(_lib2.default, {
 	            size: '60px',
 	            id: 'react-toggles-60',
-	            defaultChecked: true,
-	            onChange: function onChange(e, flag) {
-	              console.log(flag);
+	            checked: this.state.toggle60,
+	            onChange: function onChange(flag) {
+	              _this2.setState({ toggle60: flag });
 	            } })
 	        ),
 	        _react2.default.createElement(
@@ -120,9 +129,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(_lib2.default, {
 	            size: '120px',
 	            id: 'react-toggles-120',
-	            defaultChecked: true,
-	            onChange: function onChange(e, flag) {
-	              console.log(flag);
+	            checked: this.state.toggle120,
+	            onChange: function onChange(flag) {
+	              _this2.setState({ toggle120: flag });
 	            } })
 	        ),
 	        _react2.default.createElement(
@@ -136,9 +145,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _react2.default.createElement(_lib2.default, {
 	            size: '180px',
 	            id: 'react-toggles-180',
-	            defaultChecked: false,
-	            onChange: function onChange(e, flag) {
-	              console.log(flag);
+	            checked: this.state.toggle180,
+	            onChange: function onChange(flag) {
+	              _this2.setState({ toggle180: flag });
 	            } })
 	        )
 	      );
@@ -19799,10 +19808,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function Toggle() {
 	    _classCallCheck(this, Toggle);
 	
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Toggle).call(this));
-	
-	    _this.state = {};
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Toggle).apply(this, arguments));
 	  }
 	
 	  _createClass(Toggle, [{
@@ -19814,11 +19820,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        type: 'checkbox',
 	        id: this.props.id,
 	        name: this.props.formName,
-	        checked: typeof this.state.checked === 'boolean' ? this.state.checked : this.props.defaultChecked,
+	        checked: this.props.checked,
 	        onChange: function onChange(e) {
 	          var flag = e.target.checked;
-	          _this2.props.onChange(e, flag);
-	          _this2.setState({ checked: flag });
+	          _this2.props.onChange(flag);
 	        } }), _react2.default.createElement('label', {
 	        className: _index2.default.bar,
 	        htmlFor: this.props.id,
@@ -19838,12 +19843,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Toggle;
 	})(_react2.default.Component);
 	
+	Toggle.propTypes = {
+	  checked: _react2.default.PropTypes.bool,
+	  onChange: _react2.default.PropTypes.func,
+	  formName: _react2.default.PropTypes.string
+	};
 	Toggle.defaultProps = {
 	  size: '64px',
 	  id: 'toggle',
 	  formName: 'formToggle',
 	  onChange: _noop2.default,
-	  defaultChecked: true
+	  checked: true
 	};
 	exports.default = Toggle;
 

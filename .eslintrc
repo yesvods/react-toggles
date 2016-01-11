@@ -1,4 +1,9 @@
 {
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
   "env": {
     "browser": true,
     "node": true,
@@ -7,10 +12,16 @@
   "rules": {
     "strict": 0,
     "no-underscore-dangle": 0,
-    "quotes": [
-      2,
-      "single"
-    ]
-  },
-  ecmaFeatures: { modules: true }
+    "indent": [2, 2],
+    "no-var": 2,
+    "no-eval": 2,
+    "no-octal": 2,
+    "no-redeclare": 2,
+    "no-fallthrough": 2,
+    "array-bracket-spacing": [2, "never"],
+    "max-nested-callbacks": [2, 3],
+    "no-this-before-super": 2,
+    "max-depth": [2, 3],
+    "max-statements": [2, 100]
+  }
 }

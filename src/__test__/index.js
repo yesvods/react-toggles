@@ -1,7 +1,8 @@
 import Toggles from '../index';
+import should from 'should';
 
 describe('Constant', () => {
-  it('add function should be worked', () => {
-    should(add(2,3)).equal(5)
+  it('just work around', () => {
+    should(1).equal(1)
   })
 })

@@ -1,6 +1,6 @@
 {
   "name": "react-toggles",
-  "version": "0.0.2",
+  "version": "0.1.3",
   "description": "Full function boilerplate to take advantage of latest ECMAScript(JavaScript) Feature.Build your react component, javascript utils and so on. The limitation is your imagination",
   "main": "lib/index.js",
   "files": [

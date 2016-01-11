@@ -4,30 +4,29 @@ import style from './index.scss';
 
 export default
 class Toggle extends React.Component {
-  constructor(){
-    super();
-    this.state = {};
-  }
   static defaultProps = {
     size: '64px',
     id: 'toggle',
     formName: 'formToggle',
     onChange: noop,
-    defaultChecked: true,
+    checked: true,
+  };
+  static propTypes = {
+    checked: React.PropTypes.bool,
+    onChange: React.PropTypes.func,
+    formName: React.PropTypes.string,
   };
   render(){
-    
     return (
   <span className={style.wrapper}>
     <input 
       type="checkbox"
       id={this.props.id}
       name={this.props.formName}
-      checked={typeof this.state.checked === 'boolean'?this.state.checked:this.props.defaultChecked}
+      checked={this.props.checked}
       onChange={e => {
         let flag = e.target.checked;
-        this.props.onChange(e, flag);
-        this.setState({checked: flag});
+        this.props.onChange(flag);
       }}/>
     <label
       className={style.bar}
